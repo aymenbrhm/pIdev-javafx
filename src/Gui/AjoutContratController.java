@@ -13,7 +13,7 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.MenuItem;
-import Services.ContratService;
+import services.ContratService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ComboBox;
@@ -48,7 +48,7 @@ public class AjoutContratController implements Initializable {
      // populate the fruit combo box with item choices.
     comboBox1.getItems().setAll("L'assurance au tiers", "L'assurance au tiers plus", "L'assurance tous risques","L'assurance auto au kilomètre");
     comboBox2.getItems().setAll(3, 6, 12);
-    comboBox3.getItems().setAll("22Tu2222", "33tu3333", "44tu4444");
+    comboBox3.getItems().setAll("Apple", "Orange", "Pear");
 }
 
   @FXML
@@ -65,7 +65,6 @@ private void ajout() {
         
         ContratInterface contratService = new ContratService();
         contratService.addContrat2(c);
-        
     }
 
 }}

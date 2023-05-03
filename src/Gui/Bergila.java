@@ -5,7 +5,6 @@
  */
 package Gui;
 
-
 import Interfaces.ContratInterface;
 import java.sql.Connection;
 import java.sql.Date;
@@ -22,9 +21,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import Services.ContratService;
-
-
+import services.ContratService;
 
 /**
  *
@@ -35,7 +32,7 @@ public class Bergila extends Application {
     @Override
     public void start(Stage stage) throws Exception {
             //mailutil.sendmail("ddjbhy@gmail.com");
-            ContratService contrat = new ContratService();
+            ContratInterface contrat=new ContratService();
             contrat.fetchandcountContract();
             try {
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/final", "root", "");
@@ -51,9 +48,8 @@ public class Bergila extends Application {
     e.printStackTrace();
 }
 
+      
         Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
-               
-
         
         Scene scene = new Scene(root);
         

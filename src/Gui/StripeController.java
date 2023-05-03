@@ -13,25 +13,17 @@ import com.stripe.exception.RateLimitException;
 import com.stripe.exception.StripeException;
 import com.stripe.model.Charge;
 import com.stripe.model.Token;
-import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.image.WritableImage;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javax.imageio.ImageIO;
 
 /**
  * FXML Controller class
@@ -112,31 +104,10 @@ public void processPayment() throws StripeException {
             gc.stroke();
         });
 
-//        BorderPane root = new BorderPane();
-//        root.setCenter(canvas);
-Button saveButton = new Button("Sauvegarder");
-saveButton.setOnAction(e -> {
-    FileChooser fileChooser = new FileChooser();
-    fileChooser.setTitle("Sélectionner un emplacement pour enregistrer l'image");
-    File file = fileChooser.showSaveDialog(primaryStage);
-    if (file != null) {
-        try {
-            WritableImage writableImage = new WritableImage(400, 400);
-            canvas.snapshot(null, writableImage);
-            ImageIO.write(SwingFXUtils.fromFXImage(writableImage, null), "png", file);
-            System.out.println("Dessin sauvegardé sous " + file.getAbsolutePath());
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
-});
-        VBox vbox = new VBox();
-vbox.getChildren().add(saveButton);
-vbox.getChildren().add(canvas);
+        BorderPane root = new BorderPane();
+        root.setCenter(canvas);
 
-
-
-        Scene scene = new Scene(vbox, 400, 400);
+        Scene scene = new Scene(root, 400, 400);
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("Signature App");

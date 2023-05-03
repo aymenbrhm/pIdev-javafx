@@ -35,20 +35,18 @@ public class HomeController implements Initializable {
       @FXML
     private VBox pnl_scroll;
     @FXML
+    private Label lbl_currentprojects;
+    @FXML
+    private Label lbl_pending;
+    @FXML
+    private Label lbl_completed;
+    @FXML
     private Button ListeContrat;
 @FXML
     private ImageView exit;
-    @FXML
-    private VBox vbox;
-    @FXML
-    private Button addcontrat;
-    @FXML
-    private Button stat;
-    @FXML
-    private Button pay;
-   
     
     
+    @FXML
     private void handleButtonAction(MouseEvent event) {        
        refreshNodes();
     }

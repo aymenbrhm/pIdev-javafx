@@ -18,7 +18,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import Services.ContratService;
+import services.ContratService;
 
 /**
  * FXML Controller class
@@ -49,7 +49,7 @@ public class AfficheContratController implements Initializable {
         //  tfLastname.setCellValueFactory(new PropertyValueFactory<>("Lastname"));
         dated.setCellValueFactory(new PropertyValueFactory<>("datedeb"));
         datef.setCellValueFactory(new PropertyValueFactory<>("datefin"));
-        type.setCellValueFactory(new PropertyValueFactory<>("type"));
+        type.setCellValueFactory(new PropertyValueFactory<>("type de contrat"));
         mat.setCellValueFactory(new PropertyValueFactory<>("Matricule"));
         
 
@@ -62,7 +62,7 @@ public class AfficheContratController implements Initializable {
       tab.setItems(offers);    
       dated.setCellValueFactory(new PropertyValueFactory<>("datedeb"));
       datef.setCellValueFactory(new PropertyValueFactory<>("datefin"));  
-      type.setCellValueFactory(new PropertyValueFactory<>("type"));  
+      type.setCellValueFactory(new PropertyValueFactory<>("type de contrat"));  
       mat.setCellValueFactory(new PropertyValueFactory<>("Matricule"));  
       System.out.println(offers);
 
@@ -71,6 +71,4 @@ public class AfficheContratController implements Initializable {
 
 
 }
-    
-    
 }

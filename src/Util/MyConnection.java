@@ -8,7 +8,6 @@ package util;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import javax.activation.DataSource;
 
 /**
  *
@@ -17,7 +16,6 @@ import javax.activation.DataSource;
 public class MyConnection {
     
     //DB PARAM
-    private static DataSource data ;
     static final String URL ="jdbc:mysql://localhost:3306/final";
     static final String USER ="root";
     static final String PASSWORD ="";
@@ -52,6 +50,5 @@ public class MyConnection {
     }
     
     
-
     
 }

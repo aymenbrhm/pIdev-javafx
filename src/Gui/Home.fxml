@@ -7,6 +7,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -106,5 +107,16 @@
             </ImageView>
          </graphic>
       </Label>
+      <HBox layoutX="252.0" layoutY="98.0" prefHeight="43.0" prefWidth="1020.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="258.0" text="Button">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="262.0" text="Button" />
+            <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="343.0" text="Button" />
+         </children>
+      </HBox>
    </children>
 </AnchorPane>
