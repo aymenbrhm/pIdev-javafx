@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.AfficheContratController">
+   <children>
+      <TableView fx:id="tab" prefHeight="400.0" prefWidth="743.0">
+        <columns>
+          <TableColumn fx:id="dated" prefWidth="195.0" text="date debut" />
+          <TableColumn fx:id="datef" prefWidth="175.0" text="date fin" />
+            <TableColumn fx:id="type" prefWidth="149.0" text="type de contrat" />
+            <TableColumn fx:id="mat" prefWidth="151.0" text="matricule" />
+        </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+   </children>
+</AnchorPane>

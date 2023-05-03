@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="tftype_Accident" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AjouterConstatController">
+   <children>
+      <Label layoutX="220.0" layoutY="14.0" prefHeight="35.0" prefWidth="234.0" text="Ajouter Constat " textFill="BLUE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnretour" layoutX="19.0" layoutY="24.0" mnemonicParsing="false" onAction="#retour" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: blue;;" text="retour" />
+      <DatePicker fx:id="dpDate_Accident" layoutX="186.0" layoutY="341.0" prefHeight="25.0" prefWidth="348.0" promptText="date_Accident " />
+      <TextField fx:id="tfImmatriculeB" layoutX="188.0" layoutY="289.0" prefHeight="25.0" prefWidth="342.0" promptText="ImmatriculeB " />
+      <TextField fx:id="tfImmatriculeA" layoutX="188.0" layoutY="233.0" prefHeight="25.0" prefWidth="342.0" promptText="ImmatriculeA" />
+      <TextField fx:id="tfvehiculeB" layoutX="190.0" layoutY="188.0" prefHeight="25.0" prefWidth="342.0" promptText="VehiculeB " />
+      <TextField fx:id="tfVehiculeA" blendMode="SRC_ATOP" layoutX="188.0" layoutY="150.0" prefHeight="25.0" prefWidth="342.0" promptText="VehiculeA" />
+      <TextField fx:id="tflieu_Accident" blendMode="SRC_ATOP" layoutX="190.0" layoutY="107.0" prefHeight="25.0" prefWidth="342.0" promptText="lieu_Accident" />
+      <Button fx:id="btnAjouter" layoutX="458.0" layoutY="371.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: blue;;" text="Ajouter" textFill="#4682b2" />
+      <Label layoutX="52.0" layoutY="345.0" text="Date_Accident " textFill="STEELBLUE" />
+      <Label layoutX="54.0" layoutY="293.0" prefHeight="20.0" prefWidth="111.0" text="ImmatriculeB" textFill="STEELBLUE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="236.0" prefHeight="17.0" prefWidth="85.0" text="ImmatriculeA" textFill="STEELBLUE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="192.0" prefHeight="17.0" prefWidth="71.0" text="VehiculeB" textFill="STEELBLUE" />
+      <Label layoutX="57.0" layoutY="153.0" prefHeight="20.0" prefWidth="80.0" text="VehiculeA" textFill="STEELBLUE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="110.0" text="Lieu_Accident" textFill="STEELBLUE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="52.0" text="Type_Accident" textFill="STEELBLUE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="tftype_accident" layoutX="190.0" layoutY="50.0" prefHeight="25.0" prefWidth="342.0" />
+   </children>
+</AnchorPane>

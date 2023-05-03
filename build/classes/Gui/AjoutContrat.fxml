@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.AjoutContratController">
+   <children>
+      <Label fx:id="titre" layoutX="26.0" layoutY="14.0" prefHeight="32.0" prefWidth="225.0" style="-fx-font: #0cf;" text="Ajout d'un Contrat" textFill="#00ccff">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <GridPane layoutX="58.0" layoutY="61.0" prefHeight="278.0" prefWidth="485.0" style="-fx-background-color: #;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="168.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="416.0" minWidth="10.0" prefWidth="317.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="label1" text="Type de Contrat">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="label2" text="Durée de contrat" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="label3" text="Matricule de Voiture" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </Label>
+          <ComboBox fx:id="comboBox1" promptText="choose" GridPane.columnIndex="1" />
+            <ComboBox fx:id="comboBox2" editable="false" prefWidth="150.0" promptText="Select an option" GridPane.columnIndex="1" GridPane.rowIndex="1">
+           
+            </ComboBox>
+            <ComboBox fx:id="comboBox3" editable="false" prefWidth="150.0" promptText="Select an option" GridPane.columnIndex="1" GridPane.rowIndex="2">
+       
+            </ComboBox>
+         </children>
+      </GridPane>
+      <Button fx:id="button" layoutX="220.0" layoutY="351.0" mnemonicParsing="false" onAction="#ajout" prefHeight="33.0" prefWidth="114.0" style="-fx-background-color: #0cf; -fx-border-radius: 50px; -fx-background-radius: 50px;" text="Ajouter" />
+   </children>
+</AnchorPane>

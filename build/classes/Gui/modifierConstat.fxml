@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="539.0" prefWidth="754.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Gui.ModifierConstatController">
+   <children>
+      <TableView fx:id="tableConstat" layoutY="14.0" prefHeight="200.0" prefWidth="754.0">
+        <columns>
+          <TableColumn fx:id="tfID" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="tftype_accident" prefWidth="113.0" text="type_accident" />
+            <TableColumn fx:id="tflieu_accident" prefWidth="87.0" text="lieu_accident " />
+            <TableColumn fx:id="tfvehiculeA" prefWidth="64.0" text="vehiculeA" />
+            <TableColumn fx:id="tfvehiculeB" prefWidth="73.0" text="vehiculeB" />
+            <TableColumn fx:id="tfimmatriculeA" prefWidth="104.0" text="immatriculeA" />
+            <TableColumn fx:id="tfimmatriculeB" prefWidth="91.0" text="immatriculeB" />
+            <TableColumn fx:id="dpdate_accident" prefWidth="146.0" text="date_accident" />
+        </columns>
+      </TableView>
+      <VBox layoutX="179.0" layoutY="220.0" prefHeight="260.0" prefWidth="157.0" spacing="10.0">
+         <children>
+            <TextField fx:id="tfId" />
+            <ComboBox fx:id="tftype_Accident" onMouseClicked="#getSelected" prefHeight="25.0" prefWidth="162.0" />
+            <TextField fx:id="tflieu_Accident" />
+            <TextField fx:id="tfVehiculeA" />
+            <TextField fx:id="tfVehiculeB" />
+            <TextField fx:id="tfImmatriculeA" />
+            <TextField fx:id="tfImmatriculeB" />
+            <DatePicker fx:id="tfdate_accident" />
+         </children>
+      </VBox>
+      <Label layoutX="58.0" layoutY="220.0" text="ID" />
+      <Label layoutX="33.0" layoutY="255.0" text="Type_accident" />
+      <Label layoutX="30.0" layoutY="292.0" text="lieu_accident" />
+      <Label layoutX="45.0" layoutY="329.0" text="vehiculeA" />
+      <Label layoutX="45.0" layoutY="363.0" text="vehiculeB" />
+      <Label layoutX="28.0" layoutY="403.0" text="immatriculeA" />
+      <Label layoutX="28.0" layoutY="430.0" text="immatriculeB" />
+      <Label layoutX="24.0" layoutY="468.0" prefHeight="17.0" prefWidth="97.0" text="date_accident " />
+      <Button fx:id="btnmodifier" layoutX="242.0" layoutY="500.0" mnemonicParsing="false" onAction="#modifier" prefHeight="25.0" prefWidth="106.0" text="modifier " />
+   </children>
+</AnchorPane>
